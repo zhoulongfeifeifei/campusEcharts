@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>智慧校园数据地图</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/dataMap.css" />
+
+</head>
+<body>
+	<div class="container-fluid" style="margin: 0 -20px;">
+		<!--第一行 标题-->
+		<div class="row header">
+			<div class="col-lg-12 col-md-12">
+				智慧校园数据地图
+			</div>
+		</div>
+		<div class="row continer center" style="margin:0 -15px ;">
+			<!--管理-->
+			<div class="mange col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div class="mangeCen">
+					<div class="centerTitle">
+						管理<br>
+						Administration
+					</div>
+					<!--教师学生考勤-->
+					<div>
+						<div class="manDaily">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">日常情况(当日)</span>
+								<a href="javascript:;">更多</a></div>
+						</div>
+						<div class="attendance">
+							<div class="attendanceLeft" id="attendanceLeft">
+							</div>
+							<div class="attendanceRight" id="attendanceRight">
+							</div>
+						</div>
+					</div>
+					<!--办公效率情况-->
+					<div>
+						<div class="banGong">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">办公效率情况(本周)</span>
+								<a href="javascript:;">更多</a></div>
+						</div>
+						<div class="banTable">
+							<table class="table table-bordered" style="width: 100%;">
+								<thead>
+									<tr class="default">
+										<th>应用</th>
+										<th>完成数</th>
+										<th>正在处理</th>
+										<th>完成时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/gongwen.jpg" alt="">公文流转</td>
+										<td>127</td>
+										<td>17</td>
+										<td>107s<img src="img/top.jpg" alt=""></td>
+									</tr>
+									<tr>
+										<td><img src="img/shenpi.jpg" alt="">审批流转</td>
+										<td>127</td>
+										<td>17</td>
+										<td>107s<img src="img/bottom.jpg" alt=""></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!--工作进度安排-->
+					<div>
+						<div class="workArrage">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">工作进度安排(当日)</span>
+								<a href="javascript:;">更多</a>
+							</div>
+							<div class="teacher">
+								<div class="preTeacher" id="preTeacher">
+								</div>
+								<div class="lastTeacher" id="lastTeacher">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--教学-->
+			<div class="education col-xs-5 col-sm-5 col-md-5 col-lg-5" style="margin: 0 -5px;">
+				<div class="eduCen">
+					<div class="centerTitle">
+						教学<br>
+						Education
+					</div>
+					<!--教学活跃度-->
+					<div>
+						<div class="teacherWork">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">教学活跃度(当日)</span></div>
+						</div>
+						<div class="workMap" id="workMap">
+
+						</div>
+					</div>
+					<!--资源类-->
+					<div class="resource">
+						<div class="resourceLeft">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">资源数量</span>
+							</div>
+							<div class="resourceNum" id="resourceNum">
+
+							</div>
+						</div>
+						<div class="resourceRight">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">资源使用情况</span>
+							</div>
+							<div class="resourceQing" id="resourceQing">
+
+							</div>
+						</div>
+					</div>
+					<!--教学情况-->
+						<div>
+							<div class="teachQing">
+								<div class="dailyTop">
+									<span><img src="img/light.jpg" alt="">教学情况(本周)</span>
+								</div>
+							</div>
+							<div class="teacherQing">
+								<div class="teachLeft" id="teachLeft">
+								</div>
+								<div class="teachRight" id="teachRight">
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+			<!--传播-->
+			<div class="spread col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<div class="sprCen">
+					<div class="centerTitle">
+						传播<br>
+						Spread
+					</div>
+					<!--资源数量-->
+					<div>
+						<div class="ziYuan">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">资源数量</span></div>
+						</div>
+						<div class="ziNum" id="ziNum">
+
+						</div>
+					</div>
+					<!--传播量-->
+					<div>
+						<div class="chuanBo">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">浏览量(本周)</span></div>
+						</div>
+						<div class="chuanNum" id="chuanNum">
+
+						</div>
+					</div>
+					<!--传播任务完成率-->
+					<div>
+						<div class="chuanRen">
+							<div class="dailyTop">
+								<span><img src="img/light.jpg" alt="">传播任务完成率</span></div>
+						</div>
+						<div class="chuanLv" id="chuanLv">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/dataMap.js"></script>
+<script type="text/javascript">
+
+</script> 
+</html>
